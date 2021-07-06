@@ -1,0 +1,11 @@
+Package: ProTools
+Type: Package
+Title: Loads all ProTools
+Version: 0.1.0
+Author: Aaron Robotham
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Just a convenience tool to quickly load all the standard ProTools packages. Nearly all of these are on GitHub asgr, but ProFit is on GitHub ICRAR.
+License: LGPL-3
+Depends: R (>= 3.0), celestial, Highlander, hyper.fit, magicaxis, ProFit, ProFound, ProSpect, Rfits, Rwcs, sphereplot, 
+Encoding: UTF-8
+LazyData: true
