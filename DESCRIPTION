@@ -7,6 +7,6 @@ Author: Aaron Robotham
 Maintainer: Aaron Robotham <aaron.robotham@uwa.edu.au>
 Description: Just a convenience tool to quickly load all the standard ProTools packages. Nearly all of these are on CRAN or GitHub asgr, but ProFit is on GitHub ICRAR.
 License: LGPL-3
-Depends: data.table (>= 1.15.0), bit64 (>= 4.0.5), Rcpp (>= 1.0.10), celestial (>= 1.5.4), Highlander (>= 0.2.10), hyper.fit (>= 1.2.1), magicaxis (>= 2.4.5), ParmOff (>= 0.1.2), ProFit (>= 2.5.2), ProFound (>= 1.24.1), ProFuse (>= 0.4.6), ProPane (>= 1.8.0), ProSpect (>= 1.6.0), Rfits (>= 1.12.3), Rwcs (>= 1.8.4), sphereplot (>= 2.0.8), ProGeny (>= 0.4.0)   
+Depends: data.table (>= 1.15.0), bit64 (>= 4.0.5), Rcpp (>= 1.0.10), celestial (>= 1.5.4), Highlander (>= 0.2.10), hyper.fit (>= 1.2.1), magicaxis (>= 2.4.5), ParmOff (>= 0.1.2), ProFit (>= 2.5.2), ProFound (>= 1.24.1), ProFuse (>= 0.4.6), ProPane (>= 1.8.2), ProSpect (>= 1.6.0), Rfits (>= 1.12.3), Rwcs (>= 1.8.4), sphereplot (>= 2.0.8), ProGeny (>= 0.4.0)   
 Encoding: UTF-8
 LazyData: true
