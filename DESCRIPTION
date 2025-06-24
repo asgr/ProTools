@@ -1,12 +1,31 @@
 Package: ProTools
 Type: Package
 Title: Loads all ProTools
-Version: 0.2.0
-Date: 2023-11-01
+Version: 0.3.0
+Date: 2025-06-24
 Author: Aaron Robotham
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: Just a convenience tool to quickly load all the standard ProTools packages. Nearly all of these are on GitHub asgr, but ProFit is on GitHub ICRAR.
+Maintainer: Aaron Robotham <aaron.robotham@uwa.edu.au>
+Description: Just a convenience tool to quickly load all the standard ProTools packages. Nearly all of these are on GitHub asgr, but ProFit is on GitHub ICRAR (just to keep you on your toes).
 License: LGPL-3
-Depends: R (>= 4.0), celestial (>= 1.5.4), Highlander (>= 0.2.6), hyper.fit (>= 1.1.3), magicaxis (>= 2.4.2), ParmOff (>= 0.1.2), ProFit (>= 2.5.1), ProFound (>= 1.21.7), ProFuse (>= 0.4.6), ProPane (>= 1.6.0), ProSpect (>= 1.3.3), Rfits (>= 1.10.1), Rwcs (>= 1.7.0), sphereplot (>= 2.0.8), data.table (>= 1.14.2), bit64 (>= 4.0.5), Rcpp (>= 1.0.10)  
+Depends:
+  R (>= 4.0),
+  celestial (>= 1.5.6),
+  Highlander (>= 0.2.10),
+  hyper.fit (>= 1.2.1),
+  magicaxis (>= 2.4.5),
+  ParmOff (>= 0.1.2),
+  ProFit (>= 2.5.2),
+  ProFound (>= 1.24.4),
+  ProFuse (>= 0.5.0),
+  ProGeny (>= 0.5.3),
+  ProPane (>= 1.8.3),
+  ProSpect (>= 1.7.0),
+  ProSpectData (>= 1.0.0),
+  Rfits (>= 1.10.1),
+  Rwcs (>= 1.7.0),
+  sphereplot (>= 2.0.8),
+  data.table (>= 1.14.2),
+  bit64 (>= 4.0.5),
+  Rcpp (>= 1.0.10)  
 Encoding: UTF-8
 LazyData: true
