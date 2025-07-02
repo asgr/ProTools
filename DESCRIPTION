@@ -1,14 +1,14 @@
 Package: ProTools
 Type: Package
 Title: Loads all ProTools
-Version: 0.4.0
-Date: 2025-06-24
+Version: 0.4.1
+Date: 2025-07-02
 Author: Aaron Robotham
 Maintainer: Aaron Robotham <aaron.robotham@uwa.edu.au>
 Description: Just a convenience tool to quickly load all the standard ProTools packages. Nearly all of these are on GitHub asgr, but ProFit is on GitHub ICRAR (just to keep you on your toes).
 License: LGPL-3
 Depends:
-  R (>= 4.0),
+  R (>= 4.3),
   celestial (>= 1.5.6),
   Highlander (>= 0.2.10),
   hyper.fit (>= 1.2.1),
@@ -19,8 +19,8 @@ Depends:
   ProFuse (>= 0.5.0),
   ProGeny (>= 0.5.3),
   ProPane (>= 1.8.3),
-  ProSpect (>= 1.7.0),
-  ProSpectData (>= 1.0.0),
+  ProSpect (>= 1.8.0),
+  ProSpectData (>= 1.1.0),
   Rfits (>= 1.10.1),
   Rwcs (>= 1.7.0),
   sphereplot (>= 2.0.8),
