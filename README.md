@@ -27,14 +27,16 @@ Nearly all packages live under GitHub user **asgr**, with the exception of **Pro
 
 ## Installation
 
-Install ProTools from GitHub using `remotes`:
+First you will need to install each package listed above to at least the version number required in the DESCRIPTION file. Follow instructions on individual repos if required.
+
+Next, install **ProTools** from GitHub using `remotes`:
 
 ```r
 install.packages("remotes")
 remotes::install_github("asgr/ProTools")
 ```
 
-Loading the package will attach the entire suite:
+Loading the package will attach the entire **ProTools** software suite:
 
 ```r
 library(ProTools)
@@ -42,11 +44,11 @@ library(ProTools)
 
 ## Papers
 
-Publications describing the methods and science behind the ProTools packages can be found in the [ProTools ADS Library](https://ui.adsabs.harvard.edu/user/libraries/-I4xxWbuR_-7f2b77Te36Q).
+Publications describing the methods and science behind the ProTools packages can be found in [Aaron Robotham's ADS Library](https://ui.adsabs.harvard.edu/user/libraries/-I4xxWbuR_-7f2b77Te36Q).
 
 ## Author
 
-[Aaron Robotham](https://github.com/asgr)
+[Aaron Robotham (ICRAR-UWA)](https://research-repository.uwa.edu.au/en/persons/aaron-robotham/)
 
 ## License
 
