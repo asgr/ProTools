@@ -5,7 +5,7 @@ Version: 0.5.0
 Date: 2026-02-24
 Author: Aaron Robotham
 Maintainer: Aaron Robotham <aaron.robotham@uwa.edu.au>
-Description: Just a convenience tool to quickly load all the standard ProTools packages. Nearly all of these are on GitHub asgr, but ProFit is on GitHub ICRAR (just to keep you on your toes).
+Description: Parent package for the Protools suite. Use this to quickly load all the standard ProTools packages. Nearly all of these are on GitHub asgr, but ProFit is on GitHub ICRAR (just to keep you on your toes).
 License: LGPL-3
 Depends:
   R (>= 4.3),
