@@ -13,7 +13,7 @@
 | [ParmOff](https://github.com/asgr/ParmOff) | | Flexible function argument matching |
 | [ProFit](https://github.com/ICRAR/ProFit) | [![R-CMD-check](https://github.com/ICRAR/ProFit/workflows/R-CMD-check/badge.svg)](https://github.com/ICRAR/ProFit/actions) | Bayesian galaxy image profile fitting |
 | [ProFound](https://github.com/asgr/ProFound) | [![R-CMD-check](https://github.com/asgr/ProFound/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProFound/actions) | Source extraction and photometry |
-| [ProFuse](https://github.com/asgr/ProFuse) |[![R-CMD-check](https://github.com/asgr/ProFuse/workflows/R-CMD-check/badge.svg)] | Multi-band galaxy fitting (ProFound + ProFit + ProSpect) |
+| [ProFuse](https://github.com/asgr/ProFuse) | [![R-CMD-check](https://github.com/asgr/ProFuse/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProFuse/actions) | Multi-band galaxy fitting (ProFound + ProFit + ProSpect) |
 | [ProGeny](https://github.com/asgr/ProGeny) | [![R-CMD-check](https://github.com/asgr/ProGeny/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProGeny/actions) | Simple Stellar Population library generation |
 | [ProPane](https://github.com/asgr/ProPane) | | Image warping, stacking, and registration |
 | [ProSpect](https://github.com/asgr/ProSpect) | [![R-CMD-check](https://github.com/asgr/ProSpect/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProSpect/actions) | Spectral energy distribution generation and fitting |
