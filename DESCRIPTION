@@ -28,5 +28,22 @@ Depends:
   data.table (>= 1.14.2),
   bit64 (>= 4.0.5),
   Rcpp (>= 1.0.10)  
+Remotes:
+  asgr/celestial,
+  asgr/Highlander,
+  asgr/hyper.fit,
+  asgr/magicaxis,
+  asgr/ParmOff,
+  ICRAR/ProFit,
+  asgr/ProFound,
+  asgr/ProFuse,
+  asgr/ProGeny,
+  asgr/ProPane,
+  asgr/ProSpect,
+  asgr/ProSpectData,
+  asgr/ProUtils,
+  asgr/Rfits,
+  asgr/Rwcs,
+  asgr/sphereplot
 Encoding: UTF-8
 LazyData: true
