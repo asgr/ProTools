@@ -6,7 +6,7 @@
 
 | Package | Status | Description |
 |---------|--------|-------------|
-| [celestial](https://github.com/asgr/celestial) | | Cosmology and angular coordinate conversions |
+| [celestial](https://github.com/asgr/celestial) | [![R-CMD-check](https://github.com/asgr/celestial/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/celestial/actions) | Core astronomy routines (coordinates, cosmology, etc) |
 | [Highlander](https://github.com/asgr/Highlander) | | Bayesian optimisation combining CMA-ES and MCMC |
 | [hyper.fit](https://github.com/asgr/hyper.fit) | | N-dimensional hyperplane fitting with errors |
 | [magicaxis](https://github.com/asgr/magicaxis) | [![R-CMD-check](https://github.com/asgr/magicaxis/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/magicaxis/actions) | Pretty scientific plotting and axis formatting |
