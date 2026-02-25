@@ -1,9 +1,5 @@
 # ProTools (R package)
 
-<!-- badges: start -->
-![R-CMD-check](https://github.com/asgr/ProTools/workflows/R-CMD-check/badge.svg)
-<!-- badges: end -->
-
 ## Synopsis
 
 **ProTools** is a convenience meta-package that loads all of the standard ProTools R packages with a single command. The suite provides a comprehensive toolkit for astronomical image analysis, galaxy modelling, spectral energy distribution fitting, and more.
@@ -169,9 +165,13 @@ Robotham A.S.G., et al., 2018, MNRAS, 476, 3137 (**ProFound**)
 
 Robotham A.S.G., et al., 2017, MNRAS, 466, 1513 (**ProFit**)
 
-Robotham A.S.G. & Bellstedt S., et al., 2020, MNRAS, 495, 905 (**ProSpect**)
+Robotham A.S.G., et al., 2020, MNRAS, 495, 905 (**ProSpect**)
 
 Robotham A.S.G., et al., 2022, MNRAS (**ProFuse**)
+
+Robotham A.S.G., et al., 2024, MNRAS, 528, 5046 (**ProPane**)
+
+Robotham A.S.G. & Bellstedt, 2025, RASTI, 4, 19 (**ProGeny**)
 
 ## Resources
 
