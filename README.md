@@ -21,7 +21,7 @@ Loading **ProTools** attaches the full suite of packages needed for end-to-end a
 | [ProGeny](https://github.com/asgr/ProGeny) | [![R-CMD-check](https://github.com/asgr/ProGeny/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProGeny/actions) | Simple Stellar Population library generation |
 | [ProPane](https://github.com/asgr/ProPane) |  [![R-CMD-check](https://github.com/asgr/ProPane/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProPane/actions) | Image warping, stacking, and registration |
 | [ProSpect](https://github.com/asgr/ProSpect) | [![R-CMD-check](https://github.com/asgr/ProSpect/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProSpect/actions) | Spectral energy distribution generation and fitting |
-| [ProSpectData](https://github.com/asgr/ProSpectData) | | Spectral template data for ProSpect |
+| [ProSpectData](https://github.com/asgr/ProSpectData) | [![R-CMD-check](https://github.com/asgr/ProSpectData/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProSpectData/actions) | Spectral template data for ProSpect |
 | [ProUtils](https://github.com/asgr/ProUtils) | [![R-CMD-check](https://github.com/asgr/ProUtils/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProUtils/actions) | Shared low-level utilities for ProTools |
 | [Rfits](https://github.com/asgr/Rfits) | [![R-CMD-check](https://github.com/asgr/Rfits/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/Rfits/actions) | FITS file I/O for images, tables, and headers |
 | [Rwcs](https://github.com/asgr/Rwcs) | [![R-CMD-check](https://github.com/asgr/Rwcs/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/Rwcs/actions) | World Coordinate System projections and conversions |
