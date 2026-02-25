@@ -159,11 +159,11 @@ Individual sub-packages have their own contributor lists; see each package's doc
 
 Publications describing the methods and science behind the **ProTools** packages can be found in [Aaron Robotham's ADS Library](https://ui.adsabs.harvard.edu/user/libraries/-I4xxWbuR_-7f2b77Te36Q).
 
-Key papers:
-
-Robotham A.S.G., et al., 2018, MNRAS, 476, 3137 (**ProFound**)
+Key **ProTools** software focussed papers:
 
 Robotham A.S.G., et al., 2017, MNRAS, 466, 1513 (**ProFit**)
+
+Robotham A.S.G., et al., 2018, MNRAS, 476, 3137 (**ProFound**)
 
 Robotham A.S.G., et al., 2020, MNRAS, 495, 905 (**ProSpect**)
 
