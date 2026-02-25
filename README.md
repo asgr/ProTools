@@ -11,7 +11,7 @@ Loading **ProTools** attaches the full suite of packages needed for end-to-end a
 | Package | Status | Description |
 |---------|--------|-------------|
 | [celestial](https://github.com/asgr/celestial) | [![R-CMD-check](https://github.com/asgr/celestial/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/celestial/actions) | Core astronomy routines (coordinates, cosmology, etc) |
-| [Highlander](https://github.com/asgr/Highlander) | | Bayesian optimisation combining CMA-ES and MCMC |
+| [Highlander](https://github.com/asgr/Highlander) | [![R-CMD-check](https://github.com/asgr/Highlander/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/Highlander/actions) | Bayesian optimisation combining CMA-ES and MCMC |
 | [hyper.fit](https://github.com/asgr/hyper.fit) | [![R-CMD-check](https://github.com/asgr/hyper.fit/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/hyper.fit/actions) | N-dimensional hyperplane fitting with errors |
 | [magicaxis](https://github.com/asgr/magicaxis) | [![R-CMD-check](https://github.com/asgr/magicaxis/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/magicaxis/actions) | Pretty scientific plotting and axis formatting |
 | [ParmOff](https://github.com/asgr/ParmOff) | [![R-CMD-check](https://github.com/asgr/ParmOff/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ParmOff/actions) | Flexible function argument matching |
