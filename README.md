@@ -14,7 +14,7 @@ Loading **ProTools** attaches the full suite of packages needed for end-to-end a
 | [Highlander](https://github.com/asgr/Highlander) | | Bayesian optimisation combining CMA-ES and MCMC |
 | [hyper.fit](https://github.com/asgr/hyper.fit) | | N-dimensional hyperplane fitting with errors |
 | [magicaxis](https://github.com/asgr/magicaxis) | [![R-CMD-check](https://github.com/asgr/magicaxis/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/magicaxis/actions) | Pretty scientific plotting and axis formatting |
-| [ParmOff](https://github.com/asgr/ParmOff) | | Flexible function argument matching |
+| [ParmOff](https://github.com/asgr/ParmOff) | [![R-CMD-check](https://github.com/asgr/ParmOff/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ParmOff/actions) | Flexible function argument matching |
 | [ProFit](https://github.com/ICRAR/ProFit) | [![R-CMD-check](https://github.com/ICRAR/ProFit/workflows/R-CMD-check/badge.svg)](https://github.com/ICRAR/ProFit/actions) | Bayesian galaxy image profile fitting |
 | [ProFound](https://github.com/asgr/ProFound) | [![R-CMD-check](https://github.com/asgr/ProFound/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProFound/actions) | Source extraction and photometry |
 | [ProFuse](https://github.com/asgr/ProFuse) | [![R-CMD-check](https://github.com/asgr/ProFuse/workflows/R-CMD-check/badge.svg)](https://github.com/asgr/ProFuse/actions) | Multi-band galaxy fitting (ProFound + ProFit + ProSpect) |
