@@ -4,7 +4,7 @@
 
 **ProTools** is a convenience meta-package that loads all of the standard ProTools R packages with a single command. The suite provides a comprehensive toolkit for astronomical image analysis, galaxy modelling, spectral energy distribution fitting, and more.
 
-Loading **ProTools** attaches the full suite of packages needed for end-to-end astronomical data reduction and analysis: from reading raw FITS files (**Rfits**), performing source extraction and photometry (**ProFound**), warping and stacking images (**ProPane**), fitting galaxy morphologies (**ProFit**), modelling stellar populations and SEDs (**ProSpect**, **ProGeny**), through to multi-band spectral-spatial decompositions (**ProFuse**). Supporting utilities for coordinate conversions (**celestial**, **Rwcs**, **sphereplot**), optimisation (**Highlander**), hyperplane fitting (**hyper.fit**), and plotting (**magicaxis**) are included as well.
+Loading **ProTools** attaches the full suite of packages needed for end-to-end astronomical data reduction and analysis:
 
 ## Sub-Packages
 
