@@ -153,25 +153,31 @@ Aaron Robotham (ICRAR-UWA), Rodrigo Tobar (ICRAR-UWA), Sabine Bellstedt (ICRAR-U
 
 Individual sub-packages have their own contributor lists; see each package's documentation for details.
 
-## Refereed Paper References
+## Referencing **ProTools**
+
+Nearly all of the **ProTools** packages have appropriate refereed or ASCL citations. Please credit these papers when the software is used for your work.
+
+### Refereed Paper References
 
 Publications describing the methods and science behind the **ProTools** packages can be found in [Aaron Robotham's ADS Library](https://ui.adsabs.harvard.edu/user/libraries/-I4xxWbuR_-7f2b77Te36Q).
 
 Key **ProTools** software focussed papers:
 
-Robotham A.S.G., et al., 2017, MNRAS, 466, 1513 (**ProFit**)
+Robotham A.S.G., et al., 2017, MNRAS, 466, 1513 (**ProFit** code introduction paper)
 
-Robotham A.S.G., et al., 2018, MNRAS, 476, 3137 (**ProFound**)
+Robotham A.S.G., et al., 2018, MNRAS, 476, 3137 (**ProFound** code introduction paper)
 
-Robotham A.S.G., et al., 2020, MNRAS, 495, 905 (**ProSpect**)
+Robotham A.S.G., et al., 2020, MNRAS, 495, 905 (**ProSpect** code introduction paper)
 
-Robotham A.S.G., et al., 2022, MNRAS, 513, 2985 (**ProFuse**)
+Thorne J.E.T., et al., 2021, MNRAS, 505, 540 (**Highlander** is discussed briefly in this work)
 
-Robotham A.S.G., et al., 2024, MNRAS, 528, 5046 (**ProPane**, **Rfits**, **Rwcs**)
+Robotham A.S.G., et al., 2022, MNRAS, 513, 2985 (**ProFuse** code introduction paper)
 
-Robotham A.S.G. & Bellstedt, 2025, RASTI, 4, 19 (**ProGeny**)
+Robotham A.S.G., et al., 2024, MNRAS, 528, 5046 (**ProPane** code introduction paper; **Rfits**, **Rwcs** are also discussed briefly in this work)
 
-## ASCL Refereences
+Robotham A.S.G. & Bellstedt, 2025, RASTI, 4, 19 (**ProGeny** code introduction paper)
+
+### ASCL Refereences
 
 Robotham A.S.G., 2016, ascl.soft., ascl:1601.002 (**hyper.fit**)
 
