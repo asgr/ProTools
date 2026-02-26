@@ -69,13 +69,11 @@ Several packages in the **ProTools** suite require compilation. Here is what you
 
 #### Linux Users
 
-You know what you are doing. You do you!
+You brave souls, you know what you are doing (I hope). You do you!
 
 #### Mac Users
 
-You should not need to install separate compilers with any **R** after v4.0.0, but in case you are stuck on an older version you can follow the extra instructions here:
-
-[https://mac.r-project.org/tools/](https://mac.r-project.org/tools/)
+You should not need to install separate compilers with any **R** after v4.0.0, but in case you are stuck on an older version you can follow the extra instructions here [https://mac.r-project.org/tools/](https://mac.r-project.org/tools/)
 
 #### Windows Users
 
@@ -139,7 +137,7 @@ image = Rfits_read_image(system.file("extdata", "image.fits", package="Rfits"))
 # Run source extraction
 profound = profoundProFound(image, skycut=1.5, magzero=30, verbose=TRUE)
 
-# Compute a cosmological distance
+# Compute a cosmological luminosity distance
 cosdistLumDist(z=0.1, H0=70, OmegaM=0.3)
 ```
 
@@ -151,11 +149,11 @@ The **ProTools** suite was developed to provide a fully integrated, end-to-end p
 
 ## Contributors
 
-Aaron Robotham (ICRAR-UWA)
+Aaron Robotham (ICRAR-UWA), Rodrigo Tobar (ICRAR-UWA), Sabine Bellstedt (ICRAR-UWA), Jessica Thorne (ICRAR-UWA), Jordan D'Silva (ICRAR-UWA)
 
 Individual sub-packages have their own contributor lists; see each package's documentation for details.
 
-## References
+## Refereed Paper References
 
 Publications describing the methods and science behind the **ProTools** packages can be found in [Aaron Robotham's ADS Library](https://ui.adsabs.harvard.edu/user/libraries/-I4xxWbuR_-7f2b77Te36Q).
 
@@ -167,11 +165,33 @@ Robotham A.S.G., et al., 2018, MNRAS, 476, 3137 (**ProFound**)
 
 Robotham A.S.G., et al., 2020, MNRAS, 495, 905 (**ProSpect**)
 
-Robotham A.S.G., et al., 2022, MNRAS (**ProFuse**)
+Robotham A.S.G., et al., 2022, MNRAS, 513, 2985 (**ProFuse**)
 
-Robotham A.S.G., et al., 2024, MNRAS, 528, 5046 (**ProPane**)
+Robotham A.S.G., et al., 2024, MNRAS, 528, 5046 (**ProPane**, **Rfits**, **Rwcs**)
 
 Robotham A.S.G. & Bellstedt, 2025, RASTI, 4, 19 (**ProGeny**)
+
+## ASCL Refereences
+
+Robotham A.S.G., 2016, ascl.soft., ascl:1601.002 (**hyper.fit**)
+
+Robotham A.S.G., 2016, ascl.soft., ascl:1602.011 (**celestial**)
+
+Robotham A.S.G., 2016, ascl.soft., ascl:1604.004 (**magicaxis**)
+
+Robotham A.S.G., 2016, ascl.soft., ascl:1612.004 (**ProFit**)
+
+Robotham A.S.G., 2018, ascl.soft., ascl:1804.006 (**ProFound**)
+
+Robotham A.S.G., 2020, ascl.soft., ascl:2002.007 (**ProSpect**)
+
+Robotham A.S.G., 2022, ascl.soft., ascl:2204.018 (**ProFuse**)
+
+Robotham A.S.G., 2023, ascl.soft., ascl:2312.020 (**ProPane**)
+
+Robotham A.S.G., 2024, ascl.soft., ascl:2402.002 (**Rfits**)
+
+Robotham A.S.G., 2024, ascl.soft., ascl:2402.003 (**Rwcs**)
 
 ## Resources
 
