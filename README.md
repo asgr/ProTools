@@ -155,7 +155,7 @@ Individual sub-packages have their own contributor lists; see each package's doc
 
 ## Referencing **ProTools**
 
-Nearly all of the **ProTools** packages have appropriate refereed or ASCL citations. Please credit these papers when the software is used for your work.
+Nearly all of the **ProTools** packages have appropriate refereed or ASCL citations. Please credit these papers and ASCL when the software is used for your work.
 
 ### Refereed Paper References
 
@@ -177,7 +177,7 @@ Robotham A.S.G., et al., 2024, MNRAS, 528, 5046 (**ProPane** code introduction p
 
 Robotham A.S.G. & Bellstedt, 2025, RASTI, 4, 19 (**ProGeny** code introduction paper)
 
-### ASCL Refereences
+### ASCL References
 
 Robotham A.S.G., 2016, ascl.soft., ascl:1601.002 (**hyper.fit**)
 
