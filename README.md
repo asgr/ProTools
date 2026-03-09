@@ -199,6 +199,19 @@ Robotham A.S.G., 2024, ascl.soft., ascl:2402.002 (**Rfits**)
 
 Robotham A.S.G., 2024, ascl.soft., ascl:2402.003 (**Rwcs**)
 
+## Traffic Metrics
+
+A nightly GitHub Actions workflow ([`.github/workflows/nightly-traffic.yml`](.github/workflows/nightly-traffic.yml)) collects view and clone statistics for every package in the ProTools suite using the GitHub REST traffic API.
+
+The results are committed back to this repository as two CSV files in the [`data/`](data/) directory:
+
+| File | Contents |
+|------|----------|
+| [`data/traffic_latest.csv`](data/traffic_latest.csv) | Latest daily snapshot per repo (refreshed every run) |
+| [`data/traffic_history.csv`](data/traffic_history.csv) | Append-only history of daily buckets |
+
+The `*_uniques` columns are the key signal: they count deduplicated visitors/clone sources per day and are the best available approximation of organic interest.  Note that GitHub only returns the most recent ~14 days of data, so history accumulates incrementally from the first workflow run.  See [`data/README.md`](data/README.md) for full column definitions and caveats.
+
 ## Resources
 
 <https://ui.adsabs.harvard.edu/user/libraries/-I4xxWbuR_-7f2b77Te36Q>

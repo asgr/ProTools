@@ -1,0 +1,46 @@
+name: Nightly GitHub Traffic Metrics
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 03:00 UTC every day
+  workflow_dispatch:       # allow manual runs
+
+permissions:
+  contents: write          # needed to commit updated CSVs back to the repo
+
+jobs:
+  collect-traffic:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true   # use pre-compiled binaries where available
+
+      - name: Install R dependencies
+        shell: Rscript {0}
+        run: |
+          install.packages("httr2", repos = "https://cloud.r-project.org")
+
+      - name: Fetch traffic metrics
+        env:
+          # Use GH_TRAFFIC_TOKEN (repo-scoped PAT) when available so the script
+          # can read traffic data for all 16 repositories in the suite.
+          # Falls back to GITHUB_TOKEN which only covers asgr/ProTools itself;
+          # other repos will record status=error and the run continues.
+          GITHUB_TOKEN: ${{ secrets.GH_TRAFFIC_TOKEN || secrets.GITHUB_TOKEN }}
+        run: Rscript scripts/fetch_github_traffic.R
+
+      - name: Commit updated CSVs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/traffic_latest.csv data/traffic_history.csv
+          # Only commit if there are staged changes
+          git diff --staged --quiet || \
+            git commit -m "chore: update traffic metrics [$(date -u +%Y-%m-%d)]"
+          git push
