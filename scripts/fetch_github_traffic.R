@@ -190,5 +190,5 @@ if (length(history_rows) > 0L) {
   message("No history rows to write.")
 }
 
-traffic_total = aggregate(views_uniques ~ repo, data = combined, FUN = sum)
+traffic_total = aggregate(cbind(views_count, views_uniques, clones_count, clones_uniques) ~ repo, data = combined, FUN = sum)
 write.csv(traffic_total, "data/traffic_total.csv", row.names = FALSE)

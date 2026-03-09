@@ -10,6 +10,7 @@ workflow.
 |------|----------|
 | `traffic_latest.csv` | One row per repo – the **most recent day's** view/clone metrics, refreshed on every run |
 | `traffic_history.csv` | **Append-only** daily snapshots across all runs; deduplicated by `(date, owner, repo)` |
+| `traffic_total.csv` | Activity totals dated from 2026-03-09 |
 
 ## Column Reference
 
@@ -39,6 +40,16 @@ workflow.
 | `views_uniques` | Unique visitors on that day |
 | `clones_count` | Total git clones on that day |
 | `clones_uniques` | Unique clone sources on that day |
+
+### `traffic_total.csv`
+
+| Column | Description |
+|--------|-------------|
+| `repo` | Repository name |
+| `views_count` | Total page views since workflow started (2026-03-09) |
+| `views_uniques` | Unique visitors since workflow started (2026-03-09) |
+| `clones_count` | Total git clones since workflow started (2026-03-09) |
+| `clones_uniques` | Unique clone sources since workflow started (2026-03-09) |
 
 ## Limitations and caveats
 
