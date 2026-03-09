@@ -191,4 +191,4 @@ if (length(history_rows) > 0L) {
 }
 
 traffic_total = aggregate(views_uniques ~ repo, data = combined, FUN = sum)
-write.csv(latest_df, "data/traffic_total.csv", row.names = FALSE)
+write.csv(traffic_total, "data/traffic_total.csv", row.names = FALSE)
