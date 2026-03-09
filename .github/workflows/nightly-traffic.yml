@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write          # needed to commit updated CSVs back to the repo
+  metadata: read
 
 jobs:
   collect-traffic:
@@ -20,7 +21,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev pkg-config
-          
+
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
         with:
@@ -37,7 +38,8 @@ jobs:
           # can read traffic data for all 16 repositories in the suite.
           # Falls back to GITHUB_TOKEN which only covers asgr/ProTools itself;
           # other repos will record status=error and the run continues.
-          GITHUB_TOKEN: ${{ secrets.GH_TRAFFIC_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_TRAFFIC_TOKEN: ${{ secrets.GH_TRAFFIC_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: Rscript scripts/fetch_github_traffic.R
 
       - name: Commit updated CSVs

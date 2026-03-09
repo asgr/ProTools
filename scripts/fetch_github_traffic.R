@@ -29,8 +29,15 @@ repos <- c(
 )
 
 # ── Config ─────────────────────────────────────────────────────────────────────
-token <- Sys.getenv("GITHUB_TOKEN")
-if (nchar(token) == 0L) stop("GITHUB_TOKEN environment variable is not set")
+token <- Sys.getenv("GH_TRAFFIC_TOKEN")
+if (nchar(token) == 0L) token <- Sys.getenv("GITHUB_TOKEN")
+if (nchar(token) == 0L) stop("No GH_TRAFFIC_TOKEN or GITHUB_TOKEN set")
+
+if (nchar(Sys.getenv("GH_TRAFFIC_TOKEN")) > 0L) {
+  message("Using GH_TRAFFIC_TOKEN")
+} else {
+  message("Falling back to GITHUB_TOKEN")
+}
 
 dir.create("data", showWarnings = FALSE, recursive = TRUE)
 
