@@ -29,6 +29,7 @@ jobs:
       - name: Install R dependencies
         shell: Rscript {0}
         run: |
+          install.packages("jsonlite", repos = "https://cloud.r-project.org")
           install.packages("httr2", repos = "https://cloud.r-project.org")
 
       - name: Fetch traffic metrics
