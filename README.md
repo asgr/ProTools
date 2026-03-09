@@ -2,9 +2,9 @@
 
 ## Synopsis
 
-**ProTools** is a convenience meta-package that loads all of the standard ProTools R packages with a single command. The suite provides a comprehensive toolkit for astronomical image analysis, galaxy modelling, spectral energy distribution fitting, and more.
+The **ProTools** suite was developed to provide a fully integrated, end-to-end pipeline for extragalactic astronomical data analysis in **R**. The suite provides a comprehensive toolkit for astronomical image analysis, galaxy modelling, spectral energy distribution fitting, and more. Rather than relying on a patchwork of loosely connected tools, **ProTools** provides a coherent ecosystem where each package is designed to interoperate naturally with the others.
 
-Loading **ProTools** attaches the full suite of packages needed for end-to-end astronomical data reduction and analysis:
+The **ProTools** package hosted here is a convenience meta-package that installs and loads all of the standard **ProTools** R packages with a single command. The current packages hosted under the **ProTools** suite banner are:
 
 ## Sub-Packages
 
@@ -143,10 +143,6 @@ cosdistLumDist(z=0.1, H0=70, OmegaM=0.3)
 
 To find long-form examples for individual packages please check the vignettes provided with each package, or browse these externally at <http://rpubs.com/asgr/>
 
-## Motivation
-
-The **ProTools** suite was developed to provide a fully integrated, end-to-end pipeline for extragalactic astronomical data analysis in **R**. Rather than relying on a patchwork of loosely connected tools, **ProTools** provides a coherent ecosystem where each package is designed to interoperate naturally with the others. The meta-package exists so that users can load the entire suite with a single command and immediately have access to everything they need.
-
 ## Contributors
 
 Aaron Robotham (ICRAR-UWA), Rodrigo Tobar (ICRAR-UWA), Sabine Bellstedt (ICRAR-UWA), Jessica Thorne (ICRAR-UWA), Jordan D'Silva (ICRAR-UWA)
@@ -209,6 +205,7 @@ The results are committed back to this repository as two CSV files in the [`data
 |------|----------|
 | [`data/traffic_latest.csv`](data/traffic_latest.csv) | Latest daily snapshot per repo (refreshed every run) |
 | [`data/traffic_history.csv`](data/traffic_history.csv) | Append-only history of daily buckets |
+| [`data/traffic_total.csv`](data/traffic_total.csv) | Activity totals dated from 2026-03-09 |
 
 The `*_uniques` columns are the key signal: they count deduplicated visitors/clone sources per day and are the best available approximation of organic interest.  Note that GitHub only returns the most recent ~14 days of data, so history accumulates incrementally from the first workflow run.  See [`data/README.md`](data/README.md) for full column definitions and caveats.
 
