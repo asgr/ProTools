@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write          # needed to commit updated CSVs back to the repo
-  metadata: read
 
 jobs:
   collect-traffic:
