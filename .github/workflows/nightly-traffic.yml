@@ -2,7 +2,7 @@ name: Nightly GitHub Traffic Metrics
 
 on:
   schedule:
-    - cron: '0 3 * * *'   # 03:00 UTC every day
+    - cron: '50 23 * * 0'   # 03:00 UTC every day
   workflow_dispatch:       # allow manual runs
 
 permissions:
