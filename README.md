@@ -221,7 +221,7 @@ The `*_uniques` columns are the key signal: they count deduplicated visitors/clo
 
 ## Forums
 
-Please sign up to <http://profit.freeforums.net/> if you want to ask a question (or browse the questions asked by others).
+Please ask questions (via Discussions tab) and raise Issues (if significant) in the relevant **ProTools** package. Very broad Discussions can also be had in this top-level **ProTools** package.
 
 ## License
 
