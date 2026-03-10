@@ -236,3 +236,13 @@ views_plot = ggplot(combined, aes(x = date, y = clones_count, colour = repo, gro
 # Save plots as PDF and PNG
 ggsave(filename = paste0("data/traffic_clones.pdf"), plot = views_plot, width = 8, height = 6)
 ggsave(filename = paste0("data/traffic_clones.png"), plot = views_plot, width = 8, height = 6)
+
+library(gridExtra)
+
+pdf('data/traffic_total.pdf', width = 7, height = 5)
+grid.table(traffic_total)
+dev.off()
+
+png('data/traffic_total.png', width = 7, height = 5, units='in', res=240)
+grid.table(traffic_total)
+dev.off()
