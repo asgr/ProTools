@@ -31,6 +31,7 @@ jobs:
         run: |
           install.packages("jsonlite", repos = "https://cloud.r-project.org")
           install.packages("httr2", repos = "https://cloud.r-project.org")
+          install.packages("ggplot2", repos = "https://cloud.r-project.org")
 
       - name: Fetch traffic metrics
         env:
