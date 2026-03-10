@@ -209,6 +209,10 @@ The results are committed back to this repository as two CSV files in the [`data
 
 The `*_uniques` columns are the key signal: they count deduplicated visitors/clone sources per day and are the best available approximation of organic interest.  Note that GitHub only returns the most recent ~14 days of data, so history accumulates incrementally from the first workflow run.  See [`data/README.md`](data/README.md) for full column definitions and caveats.
 
+![Traffic views](data/traffic_views.png)
+
+![Traffic clones](data/traffic_clones.png)
+
 ## Resources
 
 <https://ui.adsabs.harvard.edu/user/libraries/-I4xxWbuR_-7f2b77Te36Q>
