@@ -192,3 +192,47 @@ if (length(history_rows) > 0L) {
 
 traffic_total = aggregate(cbind(views_count, views_uniques, clones_count, clones_uniques) ~ repo, data = combined, FUN = sum)
 write.csv(traffic_total, "data/traffic_total.csv", row.names = FALSE)
+
+#some plots
+
+library(ggplot2)
+
+# Create ggplot for views over time
+views_plot = ggplot(combined, aes(x = date, y = views_count, colour = repo, group = repo)) +
+  geom_line() +
+  geom_point(size = 1) +
+  labs(
+    x = "Date",
+    y = "Views count",
+    colour = "Package (repo)",
+    title = "GitHub views per day for each package"
+  ) +
+  theme_bw() +
+  theme(
+    legend.position = "right",
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+# Save plots as PDF and PNG
+ggsave(filename = paste0("data/traffic_views.pdf"), plot = views_plot, width = 8, height = 6)
+ggsave(filename = paste0("data/traffic_views.png"), plot = views_plot, width = 8, height = 6)
+
+# Create ggplot for clones over time
+views_plot = ggplot(combined, aes(x = date, y = clones_count, colour = repo, group = repo)) +
+  geom_line() +
+  geom_point(size = 1) +
+  labs(
+    x = "Date",
+    y = "Clones count",
+    colour = "Package (repo)",
+    title = "GitHub clones per day for each package"
+  ) +
+  theme_bw() +
+  theme(
+    legend.position = "right",
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+# Save plots as PDF and PNG
+ggsave(filename = paste0("data/traffic_clones.pdf"), plot = views_plot, width = 8, height = 6)
+ggsave(filename = paste0("data/traffic_clones.png"), plot = views_plot, width = 8, height = 6)
