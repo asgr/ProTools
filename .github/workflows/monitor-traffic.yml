@@ -1,4 +1,4 @@
-name: Nightly GitHub Traffic Metrics
+name: Monitor GitHub Traffic Metrics
 
 on:
   schedule:
