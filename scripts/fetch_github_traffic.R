@@ -196,9 +196,17 @@ write.csv(traffic_total, "data/traffic_total.csv", row.names = FALSE)
 #some plots
 
 library(ggplot2)
+library(data.table)
+library(magicaxis)
+
+setDT(combined)
+
+combined_views = combined[,magrun(as.integer(as.Date(date)), views_count, type='mean')[c('x','y')],by=repo]
+combined_views$x = as.Date(combined_views$x)
+colnames(combined_views) = c('repo', 'date', 'views_count')
 
 # Create ggplot for views over time
-views_plot = ggplot(combined, aes(x = date, y = views_count, colour = repo, group = repo)) +
+views_plot = ggplot(combined_views, aes(x = date, y = views_count, colour = repo, group = repo)) +
   geom_line() +
   geom_point(size = 1) +
   labs(
@@ -217,8 +225,12 @@ views_plot = ggplot(combined, aes(x = date, y = views_count, colour = repo, grou
 ggsave(filename = paste0("data/traffic_views.pdf"), plot = views_plot, width = 8, height = 6)
 ggsave(filename = paste0("data/traffic_views.png"), plot = views_plot, width = 8, height = 6)
 
+combined_clones = combined[,magrun(as.integer(as.Date(date)), clones_count, type='mean')[c('x','y')],by=repo]
+combined_clones$x = as.Date(combined_clones$x)
+colnames(combined_clones) = c('repo', 'date', 'clones_count')
+
 # Create ggplot for clones over time
-views_plot = ggplot(combined, aes(x = date, y = clones_count, colour = repo, group = repo)) +
+clones_plot = ggplot(combined_clones, aes(x = date, y = clones_count, colour = repo, group = repo)) +
   geom_line() +
   geom_point(size = 1) +
   labs(
@@ -234,8 +246,8 @@ views_plot = ggplot(combined, aes(x = date, y = clones_count, colour = repo, gro
   )
 
 # Save plots as PDF and PNG
-ggsave(filename = paste0("data/traffic_clones.pdf"), plot = views_plot, width = 8, height = 6)
-ggsave(filename = paste0("data/traffic_clones.png"), plot = views_plot, width = 8, height = 6)
+ggsave(filename = paste0("data/traffic_clones.pdf"), plot = clones_plot, width = 8, height = 6)
+ggsave(filename = paste0("data/traffic_clones.png"), plot = clones_plot, width = 8, height = 6)
 
 library(gridExtra)
 
