@@ -197,29 +197,29 @@ Robotham A.S.G., 2024, ascl.soft., ascl:2402.003 (**Rwcs**)
 
 ## Traffic Metrics
 
-A nightly GitHub Actions workflow ([`.github/workflows/nightly-traffic.yml`](.github/workflows/nightly-traffic.yml)) collects view and clone statistics for every package in the ProTools suite using the GitHub REST traffic API.
+A weekly GitHub Actions workflow ([`.github/workflows/monitor-traffic.yml`](.github/workflows/monitor-traffic.yml)) collects view and clone statistics for every package in the ProTools suite using the GitHub REST traffic API.
 
-The results are committed back to this repository as two CSV files in the [`data/`](data/) directory:
+The results are committed back to this repository as two CSV files in the [`inst/extdata/`](inst/extdata/) directory:
 
 | File | Contents |
 |------|----------|
-| [`data/traffic_latest.csv`](data/traffic_latest.csv) | Latest daily snapshot per repo (refreshed every run) |
-| [`data/traffic_history.csv`](data/traffic_history.csv) | Append-only history of daily buckets |
-| [`data/traffic_total.csv`](data/traffic_total.csv) | Activity totals since 2026-03-09 |
+| [`inst/extdata/traffic_latest.csv`](inst/extdata/traffic_latest.csv) | Latest daily snapshot per repo (refreshed every run) |
+| [`inst/extdata/traffic_history.csv`](inst/extdata/traffic_history.csv) | Append-only history of daily buckets |
+| [`inst/extdata/traffic_total.csv`](inst/extdata/traffic_total.csv) | Activity totals since 2026-03-09 |
 
-The `*_uniques` columns are the key signal: they count deduplicated visitors/clone sources per day and are the best available approximation of organic interest.  Note that GitHub only returns the most recent ~14 days of data, so history accumulates incrementally from the first workflow run.  See [`data/README.md`](data/README.md) for full column definitions and caveats.
+The `*_uniques` columns are the key signal: they count deduplicated visitors/clone sources per day and are the best available approximation of organic interest.  Note that GitHub only returns the most recent ~14 days of data, so history accumulates incrementally from the first workflow run.  See [`inst/extdata/README.md`](inst/extdata/README.md) for full column definitions and caveats.
 
 ### Visualisation
 
 #### Total Traffic Table (since 2026-03-09)
 
-![Traffic total since since 2026-03-09](data/traffic_total.png)
+![Traffic total since since 2026-03-09](inst/extdata/traffic_total.png)
 
 #### Traffic History Graphs (since 2026-03-09)
 
-![Traffic views since since 2026-03-09](data/traffic_views.png)
+![Traffic views since since 2026-03-09](inst/extdata/traffic_views.png)
 
-![Traffic clones since since 2026-03-09](data/traffic_clones.png)
+![Traffic clones since since 2026-03-09](inst/extdata/traffic_clones.png)
 
 ## Resources
 

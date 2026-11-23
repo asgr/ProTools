@@ -1,7 +1,7 @@
 # Traffic Metrics Data
 
-This directory contains GitHub repository traffic data collected nightly by the
-[`nightly-traffic`](../.github/workflows/nightly-traffic.yml) GitHub Actions
+This directory contains GitHub repository traffic data collected weekly by the
+[`monitor-traffic`](../../.github/workflows/monitor-traffic.yml) GitHub Actions
 workflow.
 
 ## Files
@@ -55,7 +55,7 @@ workflow.
 
 * **14-day window.** The GitHub traffic API returns data for approximately the
   last 14 days only.  Older data is not available via the API; the history file
-  accumulates data from each nightly run, so the full history extends back to
+  accumulates data from each weekly run, so the full history extends back to
   whenever the workflow was first enabled.
 
 * **Aggregated counts.** GitHub aggregates traffic into calendar-day buckets

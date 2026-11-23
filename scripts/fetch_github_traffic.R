@@ -3,8 +3,8 @@
 #
 # Fetch GitHub traffic metrics (views + clones, per-day) for the ProTools suite.
 # Writes:
-#   data/traffic_latest.csv  – one row per repo (latest day), overwritten each run
-#   data/traffic_history.csv – append-only daily buckets, deduplicated by date+owner+repo
+#   inst/extdata/traffic_latest.csv  – one row per repo (latest day), overwritten each run
+#   inst/extdata/traffic_history.csv – append-only daily buckets, deduplicated by date+owner+repo
 
 library(httr2)
 
@@ -39,7 +39,7 @@ if (nchar(Sys.getenv("GH_TRAFFIC_TOKEN")) > 0L) {
   message("Falling back to GITHUB_TOKEN")
 }
 
-dir.create("data", showWarnings = FALSE, recursive = TRUE)
+dir.create("inst/extdata", showWarnings = FALSE, recursive = TRUE)
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -165,11 +165,11 @@ for (i in seq_along(repos)) {
 # ── Write traffic_latest.csv (overwrite each run) ─────────────────────────────
 latest_df <- do.call(rbind, latest_rows)
 latest_df <- latest_df[order(latest_df$owner, latest_df$repo), ]
-write.csv(latest_df, "data/traffic_latest.csv", row.names = FALSE)
-message("Wrote data/traffic_latest.csv (", nrow(latest_df), " rows)")
+write.csv(latest_df, "inst/extdata/traffic_latest.csv", row.names = FALSE)
+message("Wrote inst/extdata/traffic_latest.csv (", nrow(latest_df), " rows)")
 
 # ── Write traffic_history.csv (append + dedup) ────────────────────────────────
-history_file <- "data/traffic_history.csv"
+history_file <- "inst/extdata/traffic_history.csv"
 
 if (length(history_rows) > 0L) {
   new_history <- do.call(rbind, history_rows)
@@ -185,13 +185,13 @@ if (length(history_rows) > 0L) {
 
   combined <- combined[order(combined$date, combined$owner, combined$repo), ]
   write.csv(combined, history_file, row.names = FALSE)
-  message("Wrote data/traffic_history.csv (", nrow(combined), " total rows)")
+  message("Wrote inst/extdata/traffic_history.csv (", nrow(combined), " total rows)")
 } else {
   message("No history rows to write.")
 }
 
 traffic_total = aggregate(cbind(views_count, views_uniques, clones_count, clones_uniques) ~ repo, data = combined, FUN = sum)
-write.csv(traffic_total, "data/traffic_total.csv", row.names = FALSE)
+write.csv(traffic_total, "inst/extdata/traffic_total.csv", row.names = FALSE)
 
 #some plots
 
@@ -222,8 +222,8 @@ views_plot = ggplot(combined_views, aes(x = date, y = views_count, colour = repo
   )
 
 # Save plots as PDF and PNG
-ggsave(filename = paste0("data/traffic_views.pdf"), plot = views_plot, width = 8, height = 6)
-ggsave(filename = paste0("data/traffic_views.png"), plot = views_plot, width = 8, height = 6)
+ggsave(filename = paste0("inst/extdata/traffic_views.pdf"), plot = views_plot, width = 8, height = 6)
+ggsave(filename = paste0("inst/extdata/traffic_views.png"), plot = views_plot, width = 8, height = 6)
 
 combined_clones = combined[,magrun(as.integer(as.Date(date)), clones_count, type='mean')[c('x','y')],by=repo]
 combined_clones$x = as.Date(combined_clones$x)
@@ -246,15 +246,15 @@ clones_plot = ggplot(combined_clones, aes(x = date, y = clones_count, colour = r
   )
 
 # Save plots as PDF and PNG
-ggsave(filename = paste0("data/traffic_clones.pdf"), plot = clones_plot, width = 8, height = 6)
-ggsave(filename = paste0("data/traffic_clones.png"), plot = clones_plot, width = 8, height = 6)
+ggsave(filename = paste0("inst/extdata/traffic_clones.pdf"), plot = clones_plot, width = 8, height = 6)
+ggsave(filename = paste0("inst/extdata/traffic_clones.png"), plot = clones_plot, width = 8, height = 6)
 
 library(gridExtra)
 
-pdf('data/traffic_total.pdf', width = 7, height = 5)
+pdf('inst/extdata/traffic_total.pdf', width = 7, height = 5)
 grid.table(traffic_total)
 dev.off()
 
-png('data/traffic_total.png', width = 7, height = 5, units='in', res=240)
+png('inst/extdata/traffic_total.png', width = 7, height = 5, units='in', res=240)
 grid.table(traffic_total)
 dev.off()
