@@ -1,0 +1,12 @@
+.git
+.github
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+*.Rproj
+data
+inst
+scripts
+docker/*.log

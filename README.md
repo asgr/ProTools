@@ -120,6 +120,61 @@ remotes::install_github("asgr/ProTools")
 
 Note that **ProSpectData** must be installed before **ProSpect** since the latter depends on it.
 
+### Docker on HPC (Pawsey Setonix)
+
+If compiling the suite natively sounds painful — especially on HPC where you may not control the toolchain or system libraries — use the pre-built **ProTools container** instead. It contains the full suite at pinned, reproducible versions, works fully headless (no X11/OpenGL needed), and on Pawsey Setonix it runs via **Singularity/Apptainer**, which is already installed there. No Docker, root access, or compilation required.
+
+The image is published on the GitHub Container Registry at `ghcr.io/asgr/protools` (tags: `0.6.0`, `latest`). It is public — no login or token needed to pull. The build recipe lives in [`docker/`](docker/README.md).
+
+**1. Pull the image once (on a login node — this is I/O, not compute):**
+
+```bash
+module load singularity
+export SINGULARITY_CACHEDIR=$MYSOFTWARE/singularity/cache
+export SINGULARITY_TMPDIR=$MYSOFTWARE/singularity/tmp
+mkdir -p $SINGULARITY_CACHEDIR $SINGULARITY_TMPDIR
+singularity pull $MYSOFTWARE/protools_0.6.0.sif docker://ghcr.io/asgr/protools:0.6.0
+```
+
+Setonix home quotas are small; keep the `.sif` (a few GB) under `$MYSOFTWARE` (i.e. your `/software` project allocation), not `$HOME`. The cache/tmp exports matter: the default `/tmp` on login nodes can be too small to unpack a multi-GB image.
+
+**2. Run interactively:**
+
+```bash
+singularity exec --bind /scratch:/scratch $MYSOFTWARE/protools_0.6.0.sif R
+```
+
+**3. Run a script as a SLURM job:**
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=protools
+#SBATCH --partition=work
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
+#SBATCH --time=04:00:00
+#SBATCH --account=<your-pawsey-account>
+
+module load singularity
+
+# Match threading to the SLURM allocation (the suite is heavily threaded)
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+singularity exec --bind /scratch:/scratch \
+  $MYSOFTWARE/protools_0.6.0.sif \
+  Rscript -e "data.table::setDTthreads($SLURM_CPUS_PER_TASK); source('analysis.R')"
+```
+
+Notes for Setonix specifically:
+
+* Bind `/scratch` (where your data lives); `$HOME` and `$MYSOFTWARE` are typically bound automatically, but adding `--bind $PWD` never hurts.
+* The image is x86-64, matching Setonix's AMD EPYC nodes — no emulation involved.
+* All suite functionality works headless. For 3D visualisation use `rgl::rglwidget()` (writes browser-viewable HTML you can copy back to your laptop); interactive `plot3d()` windows are not available, by design.
+* Everything inside the container is read-only and version-pinned. Install extra R packages into a personal library on `/software` if needed (`R_LIBS_USER`), and record them alongside your results for reproducibility.
+
+To build the image yourself (e.g. on a laptop or CI with Docker), see [`docker/README.md`](docker/README.md).
+
 ## Code Example
 
 Loading **ProTools** attaches all packages in the suite simultaneously:

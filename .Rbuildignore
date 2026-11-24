@@ -1,0 +1,9 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.Rhistory$
+^\.github$
+^inst/extdata$
+^scripts$
+^docker$
+^\.DS_Store$
+^\.dockerignore$

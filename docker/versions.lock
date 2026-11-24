@@ -1,0 +1,24 @@
+# ProTools suite version lock
+# Generated: 2026-11-23 from GitHub HEAD of each default branch.
+# Format: <owner/repo> <commit-sha> <package-version>
+# Regenerate deliberately when cutting a new image; see docker/README.md.
+# Ordered by dependency (roughly topological); installed sequentially.
+asgr/ProSpectData 5eb9b27bd87fa19b71bbad3918abdab84b526ec1 1.1.2
+asgr/ParmOff 2935e707783c730de82c0b44ddbe5f308443bb96 1.0.3
+asgr/celestial eb7149fabc6f1190ae86a41f0c491a30ac796cad 1.5.7
+asgr/magicaxis a856e4bc9e9621057cea2f9decfb7745db775769 2.7.0
+asgr/ProUtils d416a217d548c25e82f3de33b23ee46d795c5d9d 0.1.6
+asgr/Rwcs a471979182d0d3ecf94ea49fc0e92e792bc8bd83 1.9.1
+asgr/Rfits e87a7ab060a20c0acd58497c6aad49c6ed428b39 1.24.3
+asgr/LaplacesDemon 863be268df060c92fce8d37a86384c71c92d2506 16.1.8
+asgr/cmaeshpc 89a75104c9d1c7e0272b24497a05ad36ecf4da2b 1.0.1
+asgr/sphereplot 36c942eacba1156a6f8be98ba04c12cb860d5c80 2.0.8
+asgr/hyper.fit a738ec1337e717fc3e096f54c92e7afce67066d9 1.2.3
+ICRAR/ProFit 2dca6ebb6b1a47ecf6ac0cb955424fc680c8bdf7 2.8.2
+asgr/ProFound 1d56e383159606b7df9e81dcac2bf6e0051558ec 1.35.0
+asgr/ProSpect c8bbb6e60e2ff4359a73075e09d27fa8e9e4b8cd 1.13.4
+asgr/Highlander 5c521c39f2b71bba3858347a0a9c538b0c618784 0.4.0
+asgr/ProGeny d0f748c36459d56d457999415960c2325a43f319 0.8.3
+asgr/ProPane f9466c1ec3e59f94f4e0b079941b37fca0f73a71 1.12.5
+asgr/ProFuse 2a88cb7e9b8597ee464fcfffcefa88488317ed69 0.6.4
+
